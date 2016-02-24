@@ -589,8 +589,9 @@ def gameBeigin(running):
                         pygame.time.set_timer(supply_timer, 30 * 1000)
                         pygame.mixer.music.unpause()
                         pygame.mixer.unpause()
-                if event.button == 1 and back_to_game_rect.collidepoint(event.pos):
-                    gameBeigin(running)
+                if life_num == 0:
+                    if event.button == 1 and back_to_game_rect.collidepoint(event.pos):
+                        gameBeigin(running)
         
             elif event.type == MOUSEMOTION:
                 # 如果鼠标悬停在按钮区域
